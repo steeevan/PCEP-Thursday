@@ -115,3 +115,51 @@ print(f"Stay home (is raining AND is cold): {stay_home}")
 print(f"Go outside (is raining OR is cold): {go_outside}")
 print(f"Is it not raining? {not_raining}")
 print()  # Blank line for readability
+
+# 4. Operator Precedence
+# Operator precedence determines the sequence in which operations are performed in an expression
+
+# Example without parentheses
+result = 5 + 3 * 2  # Multiplication first, then addition: 5 + (3 * 2) = 11
+
+# Example with parentheses
+result_with_parentheses = (5 + 3) * 2  # Parentheses first, then multiplication: (5 + 3) * 2 = 16
+
+# Challenge Problems
+
+# Challenge Set 1
+# Given values
+x = 2
+y = 4
+
+# 1. Determine the value of x + x + y
+# 2. Determine the value of x * y + x
+# 3. Determine the value of x ** x
+# 4. Determine the value of y // x
+
+print()  # Blank line for readability
+
+# Challenge Set 2
+# Given values
+x = 2
+y = 3
+
+# 1. Determine the value of x - x + y
+# 2. Determine the value of x ** 2 + y
+# 3. Determine the value of x ** x ** y ** 2
+# 4. Determine the value of x % y
+
+print()  # Blank line for readability
+
+# Challenge Set 3
+# Given values
+x = 5
+y = 2
+
+# 1. Determine if x ** 2 >= y (True or False)
+# 2. Determine if x ** 3 == y * 10 + x * 4 - x (True or False)
+# 3. Determine if y // x < x (True or False)
+# 4. Determine the value of y ** x % x
+
+# Note: Evaluate each expression to determine the output or if it is True or False.
+
