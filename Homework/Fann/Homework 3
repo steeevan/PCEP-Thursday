@@ -1,0 +1,65 @@
+1.
+num1 = int(input("Enter a number: "))
+num2 = int(input("Enter a another number: "))
+num3 = int(input("Enter a third number: "))
+if num1 == num2 == num3:
+    print("ALL THE NUMBERS ARE THE SAME Y)OU BIMBO.")
+elif num1 > num2 > num3:
+    print(f"{num1} is the largest number.")
+elif num2 > num3 > num1:
+    print(f"{num2} is the largest number.")
+else:
+    print(f"{num3} is the largest number.")
+2.
+day = int(input("Enter a number corresponding to a day of the week: "))
+if day < 1 or day > 7:
+    print("THAT IS NOT A VALID DAY OF THE WEEK STUPID.")
+elif day == 1:
+    print("It's monday!")
+elif day == 2:
+    print("It's tuesday!")
+elif day == 3:
+    print("It's wednesday!")
+elif day == 4:
+    print("It's thursday!")
+elif day == 5:
+    print("It's friday!")
+elif day == 6:
+    print("It's saturday!")
+elif day == 7:
+    print("It's sunday!")
+3.
+year = int(input("Enter a year (1967, 2000, 2503, etc.): "))
+if year % 100 == 0:
+    if year % 400 == 0:
+        print("It's a leap year!")
+elif year % 4 == 0:
+    print("It's a leap year! Yayyy!")
+else:
+    print("Awww, it's not a leap year.")
+4.
+num1 = int(input("Enter a number: "))
+op = str(input("Enter an operation (ONLY +, -, /, *): "))
+num2 = int(input("Enter another number: "))
+if op == "/":
+    if num1 < num2:
+        print("NUMBER CANNOT BE DIVIDED.")
+elif op == "+":
+    print(f"{num1} {op} {num2} = ", num1 + num2)
+elif op == "-":
+    print(f"{num1} {op} {num2} = ", num1 - num2)
+elif op == "*":
+    print(f"{num1} {op} {num2} = ", num1 * num2)
+elif op == "/":
+    print(f"{num1} {op} {num2} = ", num1 / num2)
+else:
+    print("READ THE INSTRUCTIONS. ENTER AN AVAILABLE OPERATION.")
+5.
+age = int(input("Enter your age: "))
+votingAge = 18
+if age < 1:
+    print("ARE YOU LIKE AN UNBORN FETUS OR SOMETHING?????")
+elif age >= 18:
+    print("You're eligible to vote!")
+else:
+    print("You can vote in", votingAge - age, "years.")
