@@ -149,3 +149,10 @@ for i in range(5):
     if i == 3:
         continue
     print(i)
+
+# Activity
+# Write a loop that prints all numbers from 1 to 10, except for numbers divisible by 4.
+for i in range(1, 11):
+    if i % 4 == 0:
+        continue
+    print(i)
