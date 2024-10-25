@@ -1,0 +1,133 @@
+1.
+Arithmetic Operators = Symbols used in Python code to represent specific arithmetic operation
+ex. +, -, /, *
+
+
+2.
+Comparison Operators = Symbols used in Python code to represent the relationship between two or more numbers
+ex. ==, >, <
+
+
+3.
+Logical Operators = Words used in Python code to see if combining two or more conditons will result in True or False
+ex. and, or, not
+
+
+4.
+Assignment Operators = Symbols used in Python code to assign values to variables, indexed elements, etc.
+ex. =, +=, -=
+
+
+5.
+x = 10
+y = 4
+
+a = x + y
+print(a)
+
+
+6.
+x = 10
+y = 4
+
+b = x - y
+print(b)
+
+
+7.
+x = 10
+y = 4
+
+c = x * y
+print(c)
+
+
+8.
+x = 10
+y = 4
+
+d = x // 4
+print(d)
+
+
+9.
+a = 8
+b = 15
+
+if a > b:
+  print("True")
+else:
+  print("False")
+
+
+10.
+a = 8
+b = 15
+
+if a == b:
+  print("True")
+else:
+  print("False")
+
+
+11.
+a = 8
+b = 15
+
+if b >- a:
+  print("True")
+else:
+  print("False")
+
+
+12.
+is_raining = True
+is_windy = False
+
+if is_raining == True and is_windy == False:
+  print("DONT GO OUTSIDE")
+
+
+13.
+is_raining = True
+is_windy = False
+
+if is_raining == False and is_windy == False:
+  print("You can go outside.")
+
+
+14.
+is_raining = True
+is_windy = False
+
+if not is_raining == False:
+  print("It's raininhg")
+
+
+15.
+c = 5
+
+c += 10
+print(c)
+
+
+16.
+c = 5
+
+c -= 3
+print(c)
+
+
+16.
+c = 5
+
+c *= 2
+pritn(c)
+
+
+17.
+c = 5
+
+c /= 4
+print(c)
+  

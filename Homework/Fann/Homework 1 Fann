@@ -1,0 +1,42 @@
+1.
+city = "Chicken City"
+temperature = 68.7
+population = 5,000
+is_raining = False
+
+print(type(city))
+print(type(temperature))
+print(type(population))
+print(type(is_raining))
+
+2.
+price = float(input("Enter the price: "))
+quantity = int(input("Enter the quantity: "))
+total = price * quantity
+
+print(int(total))
+print(float(total))
+
+3.
+animals = ["armadillo", "chicken", "tomato frog", "anteater", "elephant"]
+
+animals.append("crested gecko")
+animals[1] = "tortoise"
+animals.remove("elephant")
+print(animals)
+
+4.
+book = {"name": "Harry Potter and the Sorcerer's Stone", "pages": "309", "author": "JK Rowling", "year published": 1997}
+book.update({"genre": "fantasy"})
+book["year published"] =  1998
+book.remove({"author"})
+print(book)
+
+5.
+nums = (45,63,1,89,20)
+nums.add(13)
+nums.remove(45)
+nums2 = (10,20,30)
+nums3 = (1,2,3)
+nums = nums.union(nums2)
+nums = nums.intersection(nums3)
