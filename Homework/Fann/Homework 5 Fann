@@ -1,0 +1,109 @@
+1.
+tup = (1,2,3,4,5,6,7,8,9,10)
+print(len(tup))
+print(tup[:3])
+print(tup[::-1])
+
+
+2.
+name_age = {"Annabeth": 18, "Borsch": 19, "Chiron": 20, "Dionysus": 21, "Elon Musk": 22}
+name_age["Frankenstein"] = 5000000
+del name_age["Dionysus"]
+print("Frankenstein")
+
+
+3.
+# I'm sorry I did not know how to shorten it. You said if it worked it was fine. It works
+string = "chicken12345"
+string = string.upper()
+string = string.replace("1", "")
+string = string.replace("2", "")
+string = string.replace("3", "")
+string = string.replace("4", "")
+string = string.replace("5", "")
+string = string.replace("6", "")
+string = string.replace("7", "")
+string = string.replace("8", "")
+string = string.replace("9", "")
+string = string.replace("A", "*")
+string = string.replace("E", "*")
+string = string.replace("I", "*")
+string = string.replace("O", "*")
+string = string.replace("U", "*")
+print(string)
+
+
+4.
+students = [('John', 85), ('Alice', 92), ('Bob', 78)]
+students_dict = dict(students)
+print(students_dict)
+
+
+5.
+# I also did not know how to do this one without repeating the 'del' and 'ages[]'.
+ages = {'Alice': 30, 'Bob': 25, 'Charlie': 30, 'Diana': 22}
+del ages['Alice']
+del ages['Bob']
+del ages['Charlie']
+del ages['Diana']
+ages[30] = "Alice"
+ages[25] = "Bob"
+ages[30] = "Charlie"
+ages[22] = "Diana"
+print(ages)
+
+
+6.
+# I did not know how to make it ignore spaces and captilization. Sorry.
+palin = input("Enter a string: ")
+nilap = palin[::-1]
+if palin == nilap:
+    print("Your string is a palindrome.")
+else:
+    print("Your string is not a palindrome.")
+
+
+7.
+sentence = input("Enter a sentance: ")
+sentence = sentence.lower()
+words = sentence.split()
+word_dict = {}
+for word in words:
+    word = word.strip(",.!?")
+    if word in word_dict:
+        word_dict[word] += 1
+    else:
+        word_dict[word] = 1
+print(word_dict)
+
+
+8.
+strung = input("Enter a string: ")
+char_count = {}
+for char in strung:
+    if char != ' ':
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+most_char = max(char_count, key=char_count.get)
+print(most_char)
+
+
+9.
+dict1 = {"a":1, "b": 2, "c": 3}
+dict2 = {"d": 4, "e": 5, "f": 6}
+dict3 = dict1 | dict2
+print(dict3)
+
+
+10.
+tup1 = ("Alice", 12, "Diamond Bar")
+tup2 = ("Isabel", 11, "Chino Hills")
+tup3 = tup1 + tup2
+a,b,c,d,e,f = tup3
+tup1 = (a,b,c)
+tup2 = (d,e,f)
+print(tup1)
+print(tup2)
+print(tup3)
