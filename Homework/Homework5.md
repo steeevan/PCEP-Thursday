@@ -1,4 +1,3 @@
-Here’s the adjusted homework assignment with 10 exercises that don’t require students to define functions, ensuring it's accessible for students who haven’t yet learned about functions:
 
 ---
 
@@ -102,5 +101,3 @@ Create two tuples, each containing three items (e.g., a name, an age, and a city
 3. Print the combined tuple and then print the individual items.
 
 ---
-
-This set of 10 exercises avoids asking students to define functions and instead focuses on writing full programs or small blocks of code. Let me know if this works for your students!
