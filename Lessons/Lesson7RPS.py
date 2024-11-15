@@ -72,8 +72,7 @@ def display_results(user,computer,winner):
 # Lets make our game logic
 def play_game():
     global user_score, computer_score
-    play_again = True
-    while play_again:
+    while True:
         user_choice = get_user_choice()
         computer_choice = get_computer_choice()
         winner = determine_winner(user_choice,computer_choice)
@@ -89,6 +88,5 @@ def play_game():
         play_again = input("\nDo you want to play again? (yes/no): ").lower()
         if play_again != "yes":
             print("Thanks for Playing")
-            play_again = False
-            
+            break
 play_game()
