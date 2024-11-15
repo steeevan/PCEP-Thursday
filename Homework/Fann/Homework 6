@@ -1,0 +1,84 @@
+1.
+def say_hello():
+    print("Hello, Python!")
+
+2.
+def square(number):
+    number = number * number
+    print(number)
+
+3.
+def calculate_area(length, width):
+    print(length * 2 + width * 2)
+
+4.
+def convert_temperature(value, to_unit="C"):
+    if to_unit=="C":
+        value = value * 1.8 + 32
+    if to_unit=="F":
+        value = value - 32
+        value = value / 1.8
+    print(float(value))
+
+5.
+def factorial_recursive(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial_recursive(n - 1)
+
+6.
+def find_max(a,b,c):
+    if a > b and a > c:
+        print(a)
+    elif b > c and b > a:
+        print(b)
+    else:
+        print(c)
+
+7.
+# I don't get it. What's a matrice? Why does it add up?
+
+8.
+def is_prime(number):
+    if number % 9 == 0:
+        print("False")
+    if number % 8 == 0:
+        print("False")
+    if number % 7 == 0:
+        print("False")
+    if number % 6 == 0:
+        print("False")
+    if number % 5 == 0:
+        print("False")
+    if number % 4 == 0:
+        print("False")
+    if number % 3 == 0:
+        print("False")
+    if number % 2 == 0:
+        print("False")
+    else:
+        print("True")
+
+9.
+# I don't get it again. What is a quadratic equation or a root?
+
+10.
+def is_palindrome(word):
+    if word == word[::-1]:
+        print("True")
+    else:
+        print("False")
+
+11.
+def generate_fibonacci(n):
+    a, b = 0, 1
+    sequence = []
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    print(sequence)
+
+12.
+def sort_numbers(numbers):
+    return sorted(numbers)
