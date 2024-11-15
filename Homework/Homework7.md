@@ -72,12 +72,12 @@ Building upon your current Rock-Paper-Scissors game, you will extend its functio
 
 ---
 
-#### **8. Implement Error Logging**
+#### **8. Implement Error Logging (Optional)**
 - Add a feature to log errors to a list
 
 ---
 
-#### **9. Allow Computer to Use Strategies**
+#### **9. Allow Computer to Use Strategies (Optional)**
 - Implement different strategies for the computer:
   - **Random Mode**: The computer makes random choices.
   - **Predictive Mode**: The computer tries to counter the user’s most common choice.
