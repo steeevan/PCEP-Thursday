@@ -1,0 +1,145 @@
+import random
+
+options = ["rock", "paper", "scissor", "lizard", "spock"]
+
+winners = ["TIE", "COMPUTER WINS", "USER WINS"]
+
+won = ["YAY YOU BEAT ME!", "GOOD JOB YOU WON!", "AMAZING!", "KEEP IT UP!"]
+
+lost = ["HAHAHAHAHA I BEAT YOU.", "It's alright, try again!", "You'll do better next time!", "LOSER!!!"]
+
+tied = ["Hmm, it seems like we tied.", "OH, we tied! Atleast none of us didn't lost.", "It's good you didn't lose, I guess?"]
+
+def help_menu():
+    ask_user = input("Would you like to hear the rules? (yes/no): ")
+    if ask_user != "yes" and ask_user != "no":
+        print("!!! INVALID RESPONSE !!!")
+    elif ask_user == "yes":
+        print("Rules - Rock beats Scissors, Scissors beats Paper, Paper beats Rock, Rock beats Lizard, Lizard beats Spock, Spock beats Scissors, Scissors beats Lizard, Lizard beats Paper, Paper beats Spock, Spock beats Rock")
+
+user_score = 0
+computer_score = 0
+
+def get_user_choice():
+    while True:
+        choice = input("Enter a choice from rock, paper, scissor, lizard, spock: ").lower()
+        if choice in options:
+            return choice
+        else:
+            print("!!! INVALID CHOICE !!!")
+
+user_choice = get_user_choice()
+
+def get_computer_choice():
+    return random.choice(options)
+
+computer_choice = get_computer_choice()
+print(computer_choice)
+
+def determine_winner(user, computer):
+    if user == computer:
+        print(winners[0])
+    elif user == "rock" and computer == "scissor":
+        print(winners[2])
+    elif user == "scissor" and computer == "rock":
+        print(winners[1])
+    elif user == "scissor" and computer == "paper":
+        print(winners[2])
+    elif user == "paper" and computer == "scissor":
+        print(winners[1])
+    elif user == "paper" and computer == "rock":
+        print(winners[2])
+    elif user == "rock" and computer == "paper":
+        print(winners[1])
+    elif user == "rock" and computer == "lizard":
+        print(winners[2])
+    elif user == "lizard" and computer == "rock":
+        print(winners[1])
+    elif user == "spock" and computer == "scissor":
+        print(winners[2])
+    elif user == "scissor" and computer == "spock":
+        print(winners[1])
+    elif user == "scissor" and computer == "lizard":
+        print(winners[2])
+    elif user == "lizard" and computer == "scissor":
+        print(winners[1])
+    elif user == "lizard" and computer == "paper":
+        print(winners[2])
+    elif user == "paper" and computer == "lizard":
+        print(winners[1])
+    elif user == "paper" and computer == "spock":
+        print(winners[2])
+    elif user == "spock" and computer == "paper":
+        print(winners[1])
+    elif user == "spock" and computer == "rock":
+        print(winners[2])
+    elif user == "rock" and computer == "spock":
+        print(winners[1])
+
+def display_results(user, computer, winner):
+    global won, lost, tied
+    print(f"You chose: {user}")
+    print(f"Computer chose: {computer}")
+    if winner == winners[0]:
+        print("TIE! ", random.choice(tied))
+    elif winner == winners[2]:
+        print("USER WINS! ", random.choice(won))
+    elif winner == winners[1]:
+        print("COMPUTER WINS! ", random.choice(lost))
+
+def best_of_rounds():
+    rounds = int(input("Enter your desired amount of rounds (ODD ONLY): "))
+    if rounds % 2 == 0:
+        print("!!! NOT A VALID AMOUNT !!!")
+    best_rounds = rounds // 2 + 1
+    print(f"BEST {best_rounds} OUT OF {rounds}")
+    if user_score >- best_rounds:
+        winner = user_score
+    else:
+        winner = computer_score
+
+def show_summary():
+    user_plays = []
+    computer_plays = []
+    round_winners = []
+    print(f"User Plays each Round: {user_plays}")
+    print(f"Computer Plays each Round: {computer_plays}")
+    print(f"Winners each Round: {round_winners}")
+
+def play_game():
+    global user_score, computer_score
+    user_plays = []
+    computer_plays = []
+    round_winners = []
+    print(help_menu())
+    print(best_of_rounds())
+    while True:
+        user_choice = get_user_choice()
+        computer_choice = get_computer_choice()
+        winner = determine_winner(user_choice, computer_choice)
+        if winner == user_choice:
+            user_score += 1
+            user_plays.append(user_choice)
+            round_winners.append("User")
+        elif winner == computer_choice:
+            computer_score += 1
+            computer_plays.append(computer_choice)
+            round_winners.append("Computer")
+        else:
+            round_winners.append("Tie")
+        display_results(user_choice, computer_choice, winner)
+
+        print(f"SCORE - You: {user_score}, Computer: {computer_score}")
+
+        play_again = input("Do you want to play again? (yes/no): ")
+        if play_again == "no":
+            want_summary = input("Would you like to see the summary? (yes/no): ")
+            if want_summary == "yes":
+                print(show_summary())
+            elif want_summary != "yes" and want_summary != "no":
+                print("!!! NOT A VALID ANSWER !!!")
+        print(winner)
+        print("Thanks for Playing!")
+        break
+
+print(play_game())
