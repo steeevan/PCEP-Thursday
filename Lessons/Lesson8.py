@@ -83,4 +83,28 @@ try:
     print(a/b)
 except ZeroDivisionError:
     print("You cannont divide by zero, loser!")
-    
+
+'''
+Create a program that asks the user to enter a number. Handle the following exceptions:
+
+ValueError if the input is not a number.
+ZeroDivisionError if the number is 0 when dividing 100 by it.
+'''
+
+
+# The ele and finally blocks
+
+try:
+    value = int(input("Enter a number: "))
+except ValueError:
+    print("That's not a number!")
+else:
+    print(f"You entered: {value}")
+finally:
+    print("This will always run.")
+
+
+# Raising you rown exceptions
+age = -5
+if age < 0:
+    raise ValueError("Age cannot be negative!")
