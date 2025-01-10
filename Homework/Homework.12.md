@@ -1,0 +1,1 @@
+### ADD A VIEW to the INVENTORY

@@ -144,6 +144,19 @@ def display_menu():
     print("3. Update Item")
     print("4. View All Items")
     print("5. Exit")
+    
+def view_inventory(inventory):
+    """
+    Display all items in the inventory in a tabular format.
+    """
+    if not inventory:
+        print("Inventory is empty.")
+        return
+    print("\n{:<20} {:<10} {:<10}".format('Item Name', 'Quantity', 'Cost'))
+    print("-" * 40)
+    for item in inventory:
+        print("{:<20} {:<10} ${:<10.2f}".format(item['name'], item['quantity'], item['cost']))
+    print("-" * 40)
 
 def main():
     '''
@@ -160,7 +173,7 @@ def main():
         elif choice == '3':
             update_item(inventory)
         elif choice == '4':
-            print(inventory)
+            view_inventory(inventory)
         elif choice == '5':
             print("Exiting The inventory Management system. Goodbye!")
             sys.exit()

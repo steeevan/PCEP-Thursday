@@ -13,5 +13,15 @@
         "name": "William",
         "quantity": 1,
         "cost": 1000000000000000.0
+    },
+    {
+        "name": "Fann",
+        "quantity": 5,
+        "cost": 10.0
+    },
+    {
+        "name": "Mr E",
+        "quantity": 10000,
+        "cost": 0.01
     }
 ]
