@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Rocubk",
+        "quantity": 1000,
+        "cost": 9.0
+    },
+    {
+        "name": "Tomaotoes",
+        "quantity": 52,
+        "cost": 52000.0
+    },
+    {
+        "name": "William",
+        "quantity": 1,
+        "cost": 1000000000000000.0
+    }
+]
