@@ -1,0 +1,163 @@
+1.
+def categorize_numbers(numbers):
+    even_nums = []
+    odd_nums = []
+    for i in numbers:
+        if i % 2 == 0:
+            even_nums.append(i)
+        elif i % 2 == 1:
+            odd_nums.append(i)
+    print(f"Even : {even_nums} , Odd : {odd_nums}")
+
+2.
+def is_palindrome():
+    word = str(input("Enter a string: "))
+    if word == word[::-1]:
+        print(True)
+    else:
+        print(False)
+
+3.
+def word_frequency():
+    string = str(input("Enter a sentance(s): "))
+    string = string.lower().split()
+    amount = {}
+    for word in string:
+        if word in amount:
+            amount[word] += 1
+        else:
+            amount[word] = 1
+    return amount
+
+4. # i dont know how to do it / it is wrong
+def find_primes():
+    n = int(input("Enter a number: "))
+    primes = []
+    for num in range(1, n):
+        for i in range(2, num):
+            if num % i != 0:
+                primes.append(num)
+            else:
+                break
+    print(primes)
+
+5.
+def fibonnacci():
+    n = int(input("Enter a number: "))
+    nums = []
+    a, b = 0, 1
+    for i in range(n):
+        nums.append(a)
+        a, b = b, a + b
+    print(nums)
+
+6. 
+def matrix_multiply():
+    matrix1 = [(1), (2)], [(3), (4)]
+    matrix2 = [(5), (6)], [(7), (8)]
+    a, b = matrix1[0]
+    c, d = matrix1[1]
+    
+    e, f = matrix2[0]
+    g, h = matrix2[1]
+    
+    result = [
+        [a * e + b * g, a * f + b * h], 
+        [c * e + d * g, c * f + d * h]
+    ]
+    
+    print(result)
+
+matrix_multiply()
+
+7.
+def unique_words():
+    text = str(input("Enter a sentance(s)/phrase: "))
+    text = text.lower().split()
+    words = []
+    for word in text:
+        if word in words:
+            pass
+        else:
+            words.append(word)
+    print(words)
+
+8.
+def letter_count():
+    text = str(input("Enter a sentance/phrase/word:  "))
+    text = text.lower()
+    count = {}
+    for word in text:
+        if word in count:
+            count[word] += 1
+        else:
+            count[word] = 1
+    print(count)
+
+9.
+def factorial_sum():
+    n = int(input("Enter a number: "))
+    count = 1
+    total = 0
+    for i in range(1,n):
+        while count != i:
+            count = count + 1
+            i = i * i - 1
+            if count == i:
+                total = total + i
+    print(total)
+
+10. 
+def flatten_list():
+    nested_list = [1, [2, 3], [4, [5, 6], 7], 8]
+    flat_list = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flat_list.extend(flatten_list())
+        else:
+            flat_list.append(item)
+    
+    print(flat_list)
+
+11.
+def generate_table():
+    n = int(input("Enter a number: "))
+    table = [[(i + 1) * (j + 1) for j in range(n)] for i in range(n)]
+    for row in table:
+        print(row)
+    return table
+
+12.
+def convert_temperature():
+    con, temp = input("Celsius to Farenheit (CtoF) / Farenheit to Celsius (FtoC): "), int(input("How many degrees?: "))
+    if con == "CtoF":
+        opp_temp = temp * 9/5 + 32
+        print(float(opp_temp))
+    elif con == "FtoC":
+        opp_temp = temp - 32 * 5/9
+        print(float(opp_temp))
+    else:
+        print("!!! NOT A VALID OPTION !!!")
+
+13.
+def sort_tuples():
+        tuples = tuple(input("Enter a tuple ex. [(a,b), (c,d), (e,f]: "))
+        def get_sec_elem(tuple):
+            return tuple[1]
+        return sorted(tuples, key=get_sec_elem)
+
+14.
+def find_common():
+    list1 = [2,8,7,4,5,3,1]
+    list2 = [5,9,2,4,3,6,0]
+    list1 = set(list1)
+    list2 = set(list2)
+    inter = list1.intersection(list2)
+    print(list(inter))
+
+15.
+def merge_dicts():
+    dict1 = {"a" : 1, "b" : 23, "c" : 89 , "f" : 5}
+    dict2 = {"h" : 2 , "d" : 73, "g" : 6 , "i" : 10}
+    dict3 = {**dict1, **dict2}
+    return dict3
