@@ -1,147 +1,134 @@
-### Word Problems for Practice
 
-**1. Find Unique Characters in a String**
+**1. Task: Find Common Grocery Items**
 
-Write a function that takes a string as input and returns a list of characters that appear only once in the string. Ignore case and non-alphanumeric characters.
+**Description:**
+
+You have two shopping lists—one from last week and one from this week. Find out which items appear in both lists and return them as a new list.
 
 **Example:**
 
+Input:
+
 ```python
-Input: "LeetCode"
-Output: ['L', 't', 'o']
+last_week = ["milk", "bread", "eggs", "cheese", "apples"]  
+this_week = ["bread", "oranges", "milk", "bananas"]
+```
+
+Output:
+
+```python
+["milk", "bread"]
 ```
 
 ---
 
-**2. Product of All Elements Except Self**
+**2. Task: Daily Temperature Conversion**
 
-Given an array of integers `nums`, return an array `output` such that `output[i]` is equal to the product of all the elements of `nums` except `nums[i]`. Solve this without using division and in `O(n)` time complexity.
+**Description:**
+
+You have a list of temperatures in Fahrenheit recorded throughout the day. Convert each temperature to Celsius and store the converted values in a new list.
 
 **Example:**
 
+Input:
+
 ```python
-Input: nums = [1, 2, 3, 4]
-Output: [24, 12, 8, 6]
+fahrenheit_temps = [32, 50, 77, 90]
+```
+
+Output:
+
+```python
+[0.0, 10.0, 25.0, 32.2]
 ```
 
 ---
 
-**3. Longest Substring Without Repeating Characters**
+**3. Task: Favorite Recipes Filtering**
 
-Given a string `s`, find the length of the longest substring without repeating characters.
+**Description:**
+
+You have a list of all available recipes and a separate list of your favorite ingredients. Return a new list of recipes that contain one or more of your favorite ingredients.
 
 **Example:**
 
+Input:
+
 ```python
-Input: s = "abcabcbb"
-Output: 3  # The answer is "abc", with the length of 3.
+all_recipes = ["pasta with tomato sauce", "chicken curry", "avocado salad", "berry smoothie"]  
+favorite_ingredients = ["avocado", "berry"]
+```
+
+Output:
+
+```python
+["avocado salad", "berry smoothie"]
 ```
 
 ---
 
-**4. Merge Two Sorted Lists**
+**4. Task: Merge and Sort To-Do Tasks**
 
-You are given the heads of two sorted linked lists `list1` and `list2`. Merge the two lists in a single sorted linked list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list.
+**Description:**
+
+You have two lists of tasks for today, one from your personal schedule and one from your work schedule. Merge these lists and sort them alphabetically to get a single organized list of tasks.
 
 **Example:**
 
+Input:
+
 ```python
-Input: list1 = [1,2,4], list2 = [1,3,4]
-Output: [1,1,2,3,4,4]
+personal_tasks = ["buy groceries", "call mom", "walk dog"]  
+work_tasks = ["finish report", "team meeting", "call client"]
+```
+
+Output:
+
+```python
+["buy groceries", "call client", "call mom", "finish report", "team meeting", "walk dog"]
 ```
 
 ---
 
-**5. Two Sum**
+**5. Task: Calculate Average Study Time**
 
-Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+**Description:**
+
+You’ve kept track of the number of minutes you studied each day this week. Calculate the average study time.
 
 **Example:**
 
+Input:
+
 ```python
-Input: nums = [2, 7, 11, 15], target = 9
-Output: [0, 1]
+study_times = [30, 45, 60, 25, 50, 40, 35]
+```
+
+Output:
+
+```python
+Average study time: 40.71 minutes
 ```
 
 ---
 
-**6. Valid Parentheses**
+**6. Task: Find Items Below a Certain Price**
 
-Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+**Description:**
 
-An input string is valid if:
-
-1. Open brackets must be closed by the same type of brackets.
-2. Open brackets must be closed in the correct order.
+You have a list of product prices and you want to find all the products that are below a certain price threshold.
 
 **Example:**
 
-```python
-Input: s = "()[]{}"
-Output: true
-
-Input: s = "(]"
-Output: false
-```
-
----
-
-**7. Search Insert Position**
-
-Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
-
-**Example:**
+Input:
 
 ```python
-Input: nums = [1,3,5,6], target = 5
-Output: 2
-
-Input: nums = [1,3,5,6], target = 2
-Output: 1
+prices = [10.99, 25.50, 5.75, 15.00, 50.00]  
+threshold = 20.00
 ```
 
----
-
-**8. Binary Search**
-
-Write a function that takes a sorted list of integers `nums` and an integer `target`. Return the index of `target` if it exists, otherwise return `-1`. Solve this using the binary search algorithm.
-
-**Example:**
+Output:
 
 ```python
-Input: nums = [-1, 0, 3, 5, 9, 12], target = 9
-Output: 4
-
-Input: nums = [-1, 0, 3, 5, 9, 12], target = 2
-Output: -1
+[10.99, 5.75, 15.00]
 ```
-
----
-
-**9. Maximum Subarray**
-
-Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-
-**Example:**
-
-```python
-Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
-Output: 6  # [4,-1,2,1] has the largest sum = 6.
-```
-
----
-
-**10. Find the Missing Number**
-
-You are given an array containing `n` distinct numbers taken from `0, 1, 2, ..., n`. Find the one that is missing.
-
-**Example:**
-
-```python
-Input: nums = [3,0,1]
-Output: 2
-```
-
----
-
-These problems mimic LeetCode-style challenges and are designed to test problem-solving skills involving loops, data structures, and algorithmic thinking.
