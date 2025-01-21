@@ -43,10 +43,58 @@ def ex3(numbers):
 
 # Exercsie 1 on SHeet
 
-def unique_chars(s):
-    from collections import Counter
-    s = ''.join(filter(str.isalnum, s.lower()))
-    count = Counter(s)
-    return [char for char, freq in count.items() if freq == 1]
+last_week = ["milk", "bread", "eggs", "cheese", "apples"]  
+this_week = ["bread", "oranges", "milk", "bananas"]
+copies = []
 
-print(unique_chars("LeetCode"))
+for item in last_week:
+    if item in this_week:
+        copies.append(item)
+
+print(copies)
+
+# Exercsise #2
+celsius = []
+fahrenheit_temps = [32, 50, 77, 90]
+for f in fahrenheit_temps:
+    c = (f - 32) * (5/9)
+    celsius.append(int(c))
+
+print(celsius)
+
+# 3
+all_recipes = ["pasta with tomato sauce", "chicken curry", "avocado salad", "berry smoothie"]  
+favorite_ingredients = ["avocado", "berry"]
+fav_recipes = []
+for recipe in all_recipes:
+    for ingredient in favorite_ingredients:
+        if ingredient in recipe:
+            fav_recipes.append(recipe)
+            break
+
+
+    #4
+all_task = []
+personal_tasks = ["buy groceries", "call mom", "walk dog"]  
+work_tasks = ["finish report", "team meeting", "call client"]
+
+all_task += personal_tasks
+all_task += work_tasks
+all_task.sort()
+print(all_task)
+
+# 5
+study_times = [30, 45, 60, 25, 50, 40, 35]
+total_time = 0
+for time in study_times:
+    total_time += time
+average_study_time = total_time / len(study_times)
+
+
+#6
+prices = [10.99, 25.50, 5.75, 15.00, 50.00]  
+threshold = 20.00
+below_threshold = []
+for price in prices:
+    if price < threshold:
+        below_threshold.append(price)
