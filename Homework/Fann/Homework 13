@@ -1,0 +1,98 @@
+1.
+list1 = [8,2,9,10,5,3,7,2,8]
+def reverse_list(list):
+    list2 = list[::-1]
+    print(list2)
+
+2.
+list1 = [10,29,30,76,18,45,100,33]
+divisor = 5
+def multiple_count(list, num):
+    list2 = []
+    for i in list:
+        if i % num == 0:
+            list2.append(i)
+    print(list2)
+
+3.
+words = ["square", "circle", "triangle", "circle", "triangle", "triangle", "square", "circle", "square"]
+target_word = "triangle"
+def word_count(list, word):
+    count = 0
+    for i in list:
+        if word == i:
+            count += 1
+    print(count)
+
+4.
+list1 = [-3, 4, 5, 10, -23, -79, 81]
+def replace_negatives(list):
+    for i in list:
+        if i < 0:
+            list.remove(i)
+            list.append(0)
+    print(list)
+
+5.
+list1 = [1,4,6,10]
+list2 = [5,9,13,6]
+def alternating_list(list3, list4):
+    count = 0
+    total_list = []
+    for i in list1:
+        total_list.append(list3[count])
+        total_list.append(list4[count])
+        count += 1
+    print(total_list)
+
+6.
+nums = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+target_num = 40
+def find_num(numbers, number):
+    for i in numbers:
+        if i == number:
+            num = numbers.index(i)
+            print(num)
+            
+7.
+list1 = [1,4,5,9,12,4,3]
+def squares(list):
+    square_list = []
+    for i in list:
+        new_num = i * i
+        square_list.append(new_num)
+    print(square_list)
+
+8.
+list1 = ["avacado", "cherry", "banana", "pear", "pear", "avacado", "cherry", "banana", "avacado", "cherry"]
+def most_frequent(list):
+    frequency = {}
+    for string in list:
+        if string in frequency:
+            frequency[string] += 1
+        else:
+            frequency[string] = 1
+    most_frequent = None
+    max_count = 0
+    for string, count in frequency.items():
+        if count > max_count:
+            most_frequent = string
+            max_count = count
+
+9.
+list1 = [0,3,4,0,9,0,0,2,39,0,71,82]
+def remove_zeros(list):
+    for i in list:
+        if i == 0:
+            list.remove(i)
+    print(list)
+
+10.
+list1 = [5,8,1,9,10,67,28]
+def half_slice(list):
+    middle = len(list1) // 2 + 1
+    half = list[:middle]
+    second_half = list[middle:]
+    print(half)
+    print(second_half)
+half_slice(list1)
