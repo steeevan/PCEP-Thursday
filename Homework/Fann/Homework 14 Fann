@@ -1,0 +1,113 @@
+Part 1 - Math Examples
+
+1.
+I got 12.0 but it is not an answer.
+
+2.
+A. 7.0
+
+3.
+A. 2.5
+
+4.
+A. 5.0
+
+5.
+C. 24
+
+6.
+D. 4.0
+
+7.
+B. 2
+
+8.
+B. 9
+
+9.
+A. 5.0
+
+10.
+A. 7.0
+
+11.
+11
+
+12.
+1
+
+13.
+8.0
+
+14.
+3.5
+
+15.
+8
+
+16. 
+21
+
+17.
+12.5
+
+18.
+8
+
+19.
+7.33333333333
+
+20.
+9
+
+21.
+4
+
+22.
+10.5
+
+23.
+2
+
+Part 2 - Coding Challenges
+
+1.
+def floor_exponent(base, exponent, divisor):
+    num1 = base ** exponent
+    result = num1 // divisor
+    return result
+
+2.
+a = int(input("Enter a number: "))
+b = int(input("Enter a second number: "))
+c = int(input("Enter a third number: "))
+result = a * 2 - b * c + (b // a) * a ** 2 - b * c + (b // a)
+print(int(result))
+
+3.
+def mixed_arithmetic(a, b):
+    a = float(a)
+    result = a / b + a * b - (a // b)
+    return result
+print(mixed_arithmetic(7, 2))
+print(mixed_arithmetic(5, 8))
+print(mixed_arithmetic(1, 3))
+
+4.
+x = int(input("Enter an integar: "))
+y = int(input("Enter a second integar: "))
+print(x % y)
+print(y % x)
+# When python is handling the modulus sign with a negative base (the first number), the answer is a positive when exactly one number is positive, and negative when both numbers are 
+# negative. For example, -10 % 3. 3 x -4 = -12 and -10 - (-12) = 2, a positive number. If the 3 was switched out with -3, the answer would be altered to -1, a negative number.
+
+5.
+def custom_calc(x, y, z):
+    result = (x + y) ** z - x % y + x / (z - y) * (x + y) ** z - x % y + x / (z - y)
+    return result 
+
+6.
+print(10 - 2 ** 3 // 2 + (3 / 2) * 10 - 2 ** 3 // 2 + (3 / 2))
+# The reason I know my printed answer of 18.5 is as expected is because I used PEMDAS to calculate my answer. For starters, '2 ** 3 // 2' = 4, meaning the equation can be deducyted
+# down to '10 - 4 + (3 / 2) * 10 - 4 + (3 / 2))'. After that, '(3 / 2)' is equal to 1.5, meaning the equation can then be turned into '10 - 4 + 1.5 * 10 - 4 + 1.5'. Then, '1.5 * 10'
+# can be simplified to 15, making the problem '10 - 4 + 15 - 4 + 1.5. Finally, '10 - 4' equals 6, '6 + 15' equals 21, '21 - 4' equals 17, and '17 + 1.5' ultimately ends up as 18.5.
